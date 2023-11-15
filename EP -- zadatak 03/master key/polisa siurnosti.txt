@@ -1,0 +1,4 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+
+& "c:/Users/Ivana Dodik/Desktop/EP -- zadatak 03/master key/venv/Scripts/python.exe" "c:/Users/Ivana Dodik/Desktop/EP -- zadatak 03/master key/corgicoin_node_5002.py"

@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "6e957764-29f0-483b-81c5-2058b0d94520",
+		"name": "EP_02_Zemljiste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dodavanje u registar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"surface_area\": 1000,\n    \"sale_price\": 50000,\n    \"previous_owner\": \"John 123\",\n    \"current_owner\": \"Jane Smith\",\n    \"contract_date\": \"2023-06-10\",\n    \"address\": \"123 Main St\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5002/add-land-book",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5002",
+					"path": [
+						"add-land-book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Dodavanje u registar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"surface_area\": 1000,\n    \"sale_price\": 50000,\n    \"previous_owner\": \"John 123\",\n    \"current_owner\": \"Jane Smith\",\n    \"contract_date\": \"2023-06-10\",\n    \"address\": \"123 Main St\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5002/add-land-book",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5002",
+							"path": [
+								"add-land-book"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.10.6"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 17:05:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"block_index\": 2,\n    \"message\": \"New land registry added!\",\n    \"previous_hash\": \"f90385a6ab7ac52532606a968fddbe6327c5e92a62f8145f07e730c4f6ba7f8a\",\n    \"proof\": 533,\n    \"timestamp\": \"2023-06-20 19:05:49.290995\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Pregled Blockchain sa enkriptovanim poljima",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Pregled Blockchain sa enkriptovanim poljima",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5002/get-chain",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5002",
+							"path": [
+								"get-chain"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.3.6 Python/3.10.6"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 17:06:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "782"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"chain\": [\n        {\n            \"data\": null,\n            \"index\": 1,\n            \"previous_hash\": \"0\",\n            \"proof\": 1,\n            \"timestamp\": \"2023-06-20 19:05:45.229140\"\n        },\n        {\n            \"data\": \"Sjqf8H+UZZF7kRbKO9FP9za6WTZPjv227Iy4sto7T2dDiUTIQsmySbnaGQLnKSOde4xPU60ZdhnXJ+pZleDa9Jy8+gyn1CSY3beJ6KV8m+WkCzyNSLs+hrZ36/tAbKAiHi2zXjQe0S88ygRyOC9XESxQl27tnuSNpUA8sRRmDNs0iAWC/eh8PAzMwVX7sNkw1UELiqjNWDV4htJ8Hpxud0T1v3pHhfVaQt07GBvIZoIn1fWSuTDUAKoSEjlB4WdjBIvy0dnbAHtxwDRT+tzAe5G0UVSmEg9wZPo4LmDtfwR/dfKmwSJwtP4YCVMxPZ5O0V8Aj72QG7a0vo0IpmdWpg==\",\n            \"index\": 2,\n            \"previous_hash\": \"f90385a6ab7ac52532606a968fddbe6327c5e92a62f8145f07e730c4f6ba7f8a\",\n            \"proof\": 533,\n            \"timestamp\": \"2023-06-20 19:05:49.290995\"\n        },\n        {\n            \"data\": null,\n            \"index\": 3,\n            \"previous_hash\": \"d5cf29bc4ff984db91457bea7717df7cbe3389e9527c59b2b81038f77ae97402\",\n            \"proof\": 45293,\n            \"timestamp\": \"2023-06-20 19:06:28.400726\"\n        }\n    ],\n    \"length\": 3\n}"
+				}
+			]
+		}
+	]
+}
